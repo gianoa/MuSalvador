@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteBase /admincp/
+
+Options -Indexes
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^([a-zA-Z0-9/ñÑ-]+)$ index.php?url=$1 [QSA,L]
